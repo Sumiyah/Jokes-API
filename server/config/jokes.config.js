@@ -1,0 +1,9 @@
+console.log("in config")
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost/jokes_api_db", {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+})
+	.then(() => console.log("Established a connection to the database"))
+	.catch(err => console.err(err));
